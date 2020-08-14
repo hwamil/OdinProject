@@ -2,14 +2,15 @@
 <html>
     <style>
         .nav-menu {
+            position:relative;
             align-items: center;
             background-color:gray;
-            max-width: 45%;
+            width: auto;
             opacity: 1;
             display: grid;
             grid-template-columns: 50px 50px 30px 50px;
             padding-left: 20px;
-            border-radius: 20%;
+            border-radius: 50%;
         }
 
         .nav-menu:hover {
@@ -35,6 +36,20 @@
             color: hsl(150, 77%, 18%);
             font-weight: bold;
         }
+
+        li {
+            font-style: italic;
+        }
+
+        .stylized-list {
+            color: white;
+            padding: 10px 0 10px 0;
+            text-align: center;
+            font-style: italic;
+            background-color:rgb(18, 16, 121);
+            border-color:transparent;
+            border-radius: 50%;
+        }
     </style>
     <head>
         <title>Hello World!</title>
@@ -50,6 +65,16 @@
         <body>
             <div>
             <h2>Things I'd like to know:</h2>
+            <ol type="1">
+                <li class="stylized-list">Where are the cookies?</li>
+                <li class="stylized-list">How do you get them?</li>
+                <li class="stylized-list">What do you do once you get them?</li>
+            </ol>
+            <form>
+                <label>
+                    <input type="date"><input type="submit">
+                </label>
+            </form>
     
             </div>
         </body>>
