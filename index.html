@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html>
+    <style>
+        .nav-menu {
+            align-items: center;
+            background-color:gray;
+            max-width: 45%;
+            opacity: 1;
+            display: grid;
+            grid-template-columns: 50px 50px 30px 50px;
+            padding-left: 20px;
+            border-radius: 20%;
+        }
+
+        .nav-menu:hover {
+            background-color: yellow;
+            position: relative;
+            right: 100px;
+            animation-name: shake;
+            animation-duration: .3s;
+            animation-iteration-count: infinite;
+            animation-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        }
+
+        @keyframes shake {
+            50% {
+                right: 5%;
+            }
+        }
+
+        .nav-choice {
+            margin-left: 15px;
+            margin-right: 15px;
+            border-radius: 25%;
+            color: hsl(150, 77%, 18%);
+            font-weight: bold;
+        }
+    </style>
+    <head>
+        <title>Hello World!</title>
+        <header>
+            <h1>I said 'Hello World!'. </h1>
+            <div class="nav-menu">
+                <div class="nav-choice">THIS</div>
+                <div class="nav-choice">is</div>
+                <div class="nav-choice">a</div>
+                <div class="nav-choice">MESSAGE</div>
+            </div>
+        </header>
+        <body>
+            <div>
+            <h2>Things I'd like to know:</h2>
+    
+            </div>
+        </body>>
+    </head>
+</html>
