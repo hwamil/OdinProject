@@ -1,14 +1,12 @@
 <!DOCTYPE html>
 <html>
     <style>
-        div, head, header {
+        .center-this {
             display: flex;
             flex-direction: column;
             align-items: center;
-            justify-content: center;
         }
         .nav-menu {
-            align-content: center;
             position:relative;
             padding: 0 50px 0 50px;
             background: linear-gradient(10deg, black, gray, transparent, gray, black);
@@ -75,9 +73,9 @@
     </style>
     <head>
         <title>Hello World!</title>
-        <h1>I said 'Hello World!'. </h1>
-        <header class="nav-menu">
-            <div class="nav-choice">
+        <header class="center-this">
+            <h1>I said 'Hello World!'. </h1>
+            <div class="nav-menu nav-choice center-this">
                 <div id="menu-item">THIS</div>
                 <div id="menu-item">is</div>
                 <div id="menu-item">a</div>
@@ -85,7 +83,7 @@
             </div>
         </header>
     </head>
-        <body>
+        <body class="center-this">
             <div>
                 <h2>Things I'd like to know:</h2>
                 <ol type="1">
@@ -95,8 +93,8 @@
                     <li class="stylized-list" id="different">Why is CSS/HTML so hard??</li>
                 </ol>
                 <form action="https://google.com" name="random">
-                    <label for="DoB" name="birthday">
-                        <input type="date">
+                    <label>
+                        DoB: <input type="date">
                     </label>
                     <label>
                         <input type="submit" value="Submit" style="padding-left: 0 5px 0 5px">
