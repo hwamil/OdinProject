@@ -1,83 +1,113 @@
 <!DOCTYPE html>
 <html>
     <style>
-        .nav-menu {
-            position:relative;
+        div, head, header {
+            display: flex;
+            flex-direction: column;
             align-items: center;
-            background-color:gray;
-            width: auto;
-            opacity: 1;
-            display: grid;
-            grid-template-columns: 50px 50px 30px 50px;
-            padding-left: 20px;
-            border-radius: 50%;
+            justify-content: center;
         }
-
+        .nav-menu {
+            align-content: center;
+            position:relative;
+            padding: 0 50px 0 50px;
+            background: linear-gradient(10deg, black, gray, transparent, gray, black);
+            max-width: max-content;
+            border-top-left-radius: 100%;
+            border-bottom-right-radius: 100%;
+        }
         .nav-menu:hover {
-            background-color: yellow;
-            position: relative;
-            right: 100px;
+            background: linear-gradient(35deg, blue, #CCFFFF, #FFCCCC, red, indigo);
+            right: 0;
             animation-name: shake;
             animation-duration: .3s;
             animation-iteration-count: infinite;
             animation-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1.275);
         }
-
-        @keyframes shake {
-            50% {
-                right: 5%;
-            }
-        }
-
         .nav-choice {
-            margin-left: 15px;
-            margin-right: 15px;
-            border-radius: 25%;
-            color: hsl(150, 77%, 18%);
-            font-weight: bold;
+            display: flex;
+            flex-direction: row;
+            justify-content: flex-start;
+        }
+        #menu-item {
+            position: relative;
+            padding: 0 10px 0 10px;
         }
 
         li {
             font-style: italic;
         }
-
         .stylized-list {
-            color: white;
+            position: relative;
+            background: linear-gradient(35deg, blue, #CCFFFF, #FFCCCC, red, indigo);
+            max-width: 500px;
+            color: black;
             padding: 10px 0 10px 0;
             text-align: center;
             font-style: italic;
-            background-color:rgb(18, 16, 121);
-            border-color:transparent;
             border-radius: 50%;
         }
+        .stylized-list:hover {
+            background: linear-gradient(10deg, black, gray, transparent, gray, black);
+            right: 0;
+            animation-name: shake;
+            animation-duration: .3s;
+            animation-iteration-count: infinite;
+            animation-timing-function: cubic-bezier(0.175, 0.885, 0.32, 1.275);
+        }
+        #different:hover {
+            bottom: 0;
+            animation-name: up-down;
+            animation-duration: 5s;
+            animation-iteration-count: infinite;
+            animation-timing-function: ease-in-out;
+        }
+        @keyframes shake {
+            50% {
+                right: 1%;
+            }
+        }
+        @keyframes up-down {
+            50% {
+                bottom: 20vw;
+            }
+        };
     </style>
     <head>
         <title>Hello World!</title>
-        <header>
-            <h1>I said 'Hello World!'. </h1>
-            <div class="nav-menu">
-                <div class="nav-choice">THIS</div>
-                <div class="nav-choice">is</div>
-                <div class="nav-choice">a</div>
-                <div class="nav-choice">MESSAGE</div>
+        <h1>I said 'Hello World!'. </h1>
+        <header class="nav-menu">
+            <div class="nav-choice">
+                <div id="menu-item">THIS</div>
+                <div id="menu-item">is</div>
+                <div id="menu-item">a</div>
+                <div id="menu-item">MESSAGE</div>
             </div>
         </header>
+    </head>
         <body>
             <div>
-            <h2>Things I'd like to know:</h2>
-            <ol type="1">
-                <li class="stylized-list">Where are the cookies?</li>
-                <li class="stylized-list">How do you get them?</li>
-                <li class="stylized-list">What do you do once you get them?</li>
-                <li class="stylized-list">Why is CSS/HTML so hard??</li>
-            </ol>
-            <form>
-                <label>
-                    <input type="date"><input type="submit">
-                </label>
-            </form>
-    
+                <h2>Things I'd like to know:</h2>
+                <ol type="1">
+                    <li class="stylized-list">Where are the cookies?</li>
+                    <li class="stylized-list">How do you get them?</li>
+                    <li class="stylized-list">What do you do once you get them?</li>
+                    <li class="stylized-list" id="different">Why is CSS/HTML so hard??</li>
+                </ol>
+                <form action="https://google.com" name="random">
+                    <label for="DoB" name="birthday">
+                        <input type="date">
+                    </label>
+                    <label>
+                        <input type="submit" value="Submit" style="padding-left: 0 5px 0 5px">
+                    </label>
+                </form>
             </div>
-        </body>>
-    </head>
+        </body>
+        <hr>
+        <foot>
+            <footer>
+                <div style="text-align: right; padding: 5px 20px 50px 10px">Copyright SPYDERMAYNE 2020</div>
+            </footer>
+        </foot>
 </html>
