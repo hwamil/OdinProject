@@ -5,9 +5,11 @@
             display: flex;
             flex-direction: column;
             align-items: center;
+            justify-content: center;
         }
         .nav-menu {
             position:relative;
+            margin-bottom: 1em;
             padding: 0 50px 0 50px;
             background: linear-gradient(10deg, black, gray, transparent, gray, black);
             max-width: max-content;
@@ -38,7 +40,9 @@
         .stylized-list {
             position: relative;
             background: linear-gradient(35deg, blue, #CCFFFF, #FFCCCC, red, indigo);
-            max-width: 500px;
+            text-transform: capitalize;
+            width: 350px;
+            max-height: 1px;
             color: black;
             padding: 10px 0 10px 0;
             text-align: center;
@@ -60,6 +64,11 @@
             animation-iteration-count: infinite;
             animation-timing-function: ease-in-out;
         }
+        #border-this {
+            border-style: dotted;
+            border-width: 3px;
+            padding: 1em 1em 1em 1em;
+        }
         @keyframes shake {
             50% {
                 right: 1%;
@@ -69,12 +78,12 @@
             50% {
                 bottom: 20vw;
             }
-        };
+        }
     </style>
     <head>
         <title>Hello World!</title>
         <header class="center-this">
-            <h1>I said 'Hello World!'. </h1>
+            <h1 style="letter-spacing: 10px"">I said 'Hello World!'. </h1>
             <div class="nav-menu nav-choice center-this">
                 <div id="menu-item">THIS</div>
                 <div id="menu-item">is</div>
@@ -84,20 +93,20 @@
         </header>
     </head>
         <body class="center-this">
-            <div>
-                <h2>Things I'd like to know:</h2>
+            <div id="border-this">
+                <h2 style="text-align: center;">Things I'd like to know</h2>
                 <ol type="1">
                     <li class="stylized-list">Where are the cookies?</li>
                     <li class="stylized-list">How do you get them?</li>
                     <li class="stylized-list">What do you do once you get them?</li>
                     <li class="stylized-list" id="different">Why is CSS/HTML so hard??</li>
                 </ol>
-                <form action="https://google.com" name="random">
-                    <label>
-                        DoB: <input type="date">
+                <form action="https://google.com" name="random" style="display: flex; flex-direction: row; justify-content: center;">
+                    <label for="birthday">
+                        DoB: <input type="date" name="birthday" id="birthday">
                     </label>
-                    <label>
-                        <input type="submit" value="Submit" style="padding-left: 0 5px 0 5px">
+                    <label for="submit" style="display:flex; justify-content: center; align-items: center;">
+                        <input type="submit" name="submit" id="submit" value="Click" style="margin-left: 5px">
                     </label>
                 </form>
             </div>
@@ -105,7 +114,7 @@
         <hr>
         <foot>
             <footer>
-                <div style="text-align: right; padding: 5px 20px 50px 10px">Copyright SPYDERMAYNE 2020</div>
+                <div style="text-align: center; padding: 1em 1em 1em 1em" id="border-this">Copyright SPYDERMAYNE 2020</div>
             </footer>
         </foot>
 </html>
